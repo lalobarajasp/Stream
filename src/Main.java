@@ -43,7 +43,7 @@ public class Main {
          //4. Stream.of, sorted and findFirst
         Stream.of("Ava","Aneri","Alberto")
                 .sorted()
-                .findFirst()  //Just print what you find first
+                .findFirst() //Just print what you find first //if there is a null your code could break
                 .ifPresent(System.out::println);  //it is used with findFirst
 
         //5. Stream from Array, sort, filter and print
@@ -132,6 +132,13 @@ public class Main {
         IntSummaryStatistics summary = IntStream.of(7,2,19,88,73,4,10)
                 .summaryStatistics();
         System.out.println(summary);
+
+        String[] gridnames = {"Eduardo", "Manuel", "Carlos", "Aura", "Josue"};
+        Stream.of(gridnames)
+                .sorted()
+                .forEach(System.out::println);
+
+
 
 
 
